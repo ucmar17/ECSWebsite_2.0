@@ -3,8 +3,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from './logo.png';
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import SocialButtons from "./SocialButtons"
 
 const navigation = () => {
+    const divStyle = {
+        
+      };
+      
     return (
         <Navbar bg="light" expand="lg">
             <Navbar.Brand href="#home"><img src={logo} className="App-logo" alt="logo" /></Navbar.Brand>
@@ -25,6 +30,9 @@ const navigation = () => {
                         <NavDropdown.Item href="#action/5.3">ECS 1.0</NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Link href="#tickets">Ticket Sales</Nav.Link>
+                    <Nav.Link style={divStyle}><SocialButtons></SocialButtons>
+                    
+                    </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
